@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Vazir";
+  src: url(/fonts/vazir-font/Vazir-Bold-FD.ttf),
+    url(../fonts/vazir-font/Vazir-FD.ttf),
+    url(../fonts/vazir-font/Vazir-Light-FD.ttf);
+}
+
+* {
+  font-family: "Vazir";
+  margin: 0;
+  color: #f4f4f4;
+}
+
+/* ------------------------------ */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+.app {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  background-color: #4f4f4f;
+  height: 30px;
+  padding: 20px 10px;
+}
+
+.menu > * {
+  display: inline-block;
+}
+
+.brand {
+  padding-left: 20px;
+  float: left;
+  line-height: 25px;
+  font-size: 30px;
+}
+
+.navbar > * {
+  display: inline-block;
+  float: right;
+}
+
+.navbar {
+  float: right;
+  padding: 0;
+}
+
+.navbar-item-link {
+  padding: 20px 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* ------------------------------------- */
+
+.sidebar {
+    width: calc(calc(100% / 10) * 2);
+    min-height: 600px;
+    float: left;
+    background-color: #444;
+}
+
+.sidebar-menu {
+    padding-left: 0 !important;
+}
+
+.sidebar-item {
+    margin: 0 auto;
+    height: 50px;
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar-item-link {
+    padding: 20px 30px;
+    width: 100%;
+    color: #f4f4f4;
+}
+
+.content {
+    position: relative;
+    float: left;
+    background-color: #ff7300;
+    min-height: 600px;
+    width: calc(calc(100% / 10) * 8 );
+}
+
+/* ------------------------------------- */
+
+.pagination {
+  margin: 50px 0;
+}
+
+.pg-active a {
+  background-color: #eee !important;
+  color: #444;
+}
+
+.pagination ul > * {
+  display: inline-block;
+}
+
+.pagination ul li > * {
+  padding: 0px 10px;
+  background-color: #444;
+  border-radius: 40px;
+}
+
+.pagination ul {
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------ */
+
+.footer {
+  font-size: 15px;
+  margin: 0 auto;
+  width: calc(100% - 80px);
+  height: 40px;
+  padding: 0 40px;
+  color: #444;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* ----------------------------- */
+/* 
+@media (max-width: 1199.98px) {
+  .app {
+    width: 992px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .app {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .app {
+    width: 576px;
+    margin: 0 auto;
+  }
+  .brand-link {
+    font-size: 18px;
+  }
+
+  .navbar-item-link {
+    font-size: 13px;
+  }
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .app {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer {
+    width: calc(100% - 50px);
+    font-size: 10px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 459.98px) {
+  .pagination ul li > * {
+    padding: 0px 5px;
+    font-size: 12px;
+  }
+
+  .pagination ul {
+    width: 200px;
+  }
+} */

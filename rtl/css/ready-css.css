@@ -1,0 +1,80 @@
+
+.clear-fix {
+    clear: both;
+  }
+  .btn{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 35px;
+    color: #444;
+    background-color: #eee;
+  }
+  
+  .btn-big {
+    width: 100%;
+  }
+  
+  .btn-md {
+    width: 50%;
+  }
+  
+  .btn-dark {
+    color: #eee;
+    background-color: #444;
+  }
+  
+  .btn-orange {
+    color: #fff;
+    background-color: #ff7300;
+  }
+  
+  .h-auto {
+    height: auto !important;
+  }
+  
+  .p-unset {
+    position: unset !important;
+  }
+  
+  .float-left {
+    float: left !important;
+  }
+  
+  .float-right {
+    float: right !important;
+  }
+
+  .w-100 {
+    width: 100% !important;
+  }
+
+
+
+
+
+  /* ------------------------------------ */
+  
+  .mt-40px{
+    margin-top: 40px !important;
+  }
+  
+  .mb-10px {
+    margin-bottom: 10px !important;
+  }
+  
+  .mb-5px {
+    margin-bottom: 5px !important;
+  }
+  
+  .p-10px {
+    padding: 10px !important;
+  }
+  
+  .pt-30px {
+    padding-top: 30px !important;
+  }
+  
+  .bt-2px{
+    border-top: 2px solid #da6200;
+  }
+  
