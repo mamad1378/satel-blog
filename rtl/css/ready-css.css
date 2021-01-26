@@ -1,6 +1,6 @@
 
 .clear-fix {
-    clear: both;
+    clear: both !important;
   }
   .btn{
     border: none;
@@ -26,6 +26,30 @@
   .btn-orange {
     color: #fff;
     background-color: #ff7300;
+  }
+
+  .background-red {
+    background-color: red;
+  }
+
+  .background-yellow {
+    background-color: rgb(255, 187, 0);
+  }
+
+  .background-blue {
+    background-color: rgb(0, 0, 175);
+  }
+  
+  .color-red {
+    color: red;
+  }
+
+  .color-yellow {
+    color: rgb(255, 187, 0);
+  }
+
+  .color-blue {
+    color: rgb(0, 34, 129);
   }
   
   .h-auto {
@@ -64,6 +88,11 @@
   
   .mb-5px {
     margin-bottom: 5px !important;
+  }
+  
+  .mb-100px {
+    display: block;
+    margin-bottom: 100px !important;
   }
   
   .p-10px {

@@ -27,17 +27,31 @@ a {
   color: #f4f4f4;
 }
 
+hr {
+  border: 2px solid #333;
+  margin: 10px 20px 0 20px;
+}
+
 .app {
+  background-color: #333;
   position: relative;
   margin: 0 auto;
   width: 100%;
+  max-width: 1300px;
   height: auto;
 }
 
 .header {
   background-color: #4f4f4f;
   height: 30px;
+  max-width: 1282px;
+  margin: 0 auto;
   padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .menu > * {
@@ -45,10 +59,19 @@ a {
 }
 
 .brand {
-  padding-left: 20px;
-  float: left;
+  padding-right: 20px;
+  float: right;
   line-height: 25px;
   font-size: 30px;
+}
+
+.burger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 20px;
+  float: right;
+  line-height: 0px;
 }
 
 .navbar > * {
@@ -57,7 +80,7 @@ a {
 }
 
 .navbar {
-  float: right;
+  float: left;
   padding: 0;
 }
 
@@ -70,36 +93,234 @@ a {
 /* ------------------------------------- */
 
 .sidebar {
-    width: calc(calc(100% / 10) * 2);
-    min-height: 600px;
-    float: left;
-    background-color: #444;
+  width: calc(calc(100% / 10) * 2);
+  min-height: 100%;
+  height: 100%;
+  float: right;
+  background-color: #333;
+  overflow-y: scroll;
+}
+
+.sidebar-show {
+  display: block !important;
+  position: fixed;
+  right: 0;
+  top: 60px;
+  z-index: 10;
 }
 
 .sidebar-menu {
-    padding-left: 0 !important;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  text-align: right;
+  padding-right: 0 !important;
+}
+
+.sidebar-menu > * {
+  display: inline-block;
+}
+
+.sidebar-profile {
+  width: 100%;
+}
+
+.sidebar-profile-img {
+  border: 2px solid #eee;
+  border-radius: 100%;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
 }
 
 .sidebar-item {
-    margin: 0 auto;
-    height: 50px;
-    display: inline-block;
-    list-style: none;
-    width: 100%;
+  width: 100%;
+  margin: 5px 0;
+  transition: all ease-in-out 0.2s;
+}
+
+.sidebar-item:hover {
+  background-color: #555 !important;
+  transition: all ease-in-out 0.2s;
+}
+
+.sidebar-item:hover .sidebar-icon,
+.sidebar-item:hover .sidebar-item-link {
+  color: #ff7300;
 }
 
 .sidebar-item-link {
-    padding: 20px 30px;
-    width: 100%;
-    color: #f4f4f4;
+  width: calc(100% - 20px);
+  padding: 15px 10px;
+  vertical-align: middle;
+  display: inline-block;
+  color: #f4f4f4;
+  transition: all ease-in-out 0.2s;
+}
+
+.sidebar-icon {
+  font-size: 30px;
+  margin: 0 15px;
+  color: #f4f4f4;
+  transition: all ease-in-out 0.2s;
 }
 
 .content {
-    position: relative;
-    float: left;
-    background-color: #ff7300;
-    min-height: 600px;
-    width: calc(calc(100% / 10) * 8 );
+  position: relative;
+  float: right;
+  background-color: #ff7300;
+  min-height: 600px;
+  width: calc(calc(100% / 10) * 8);
+  padding-top: 70px;
+}
+
+.content-box {
+  background-color: #444;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px 6px #44444444;
+  width: 98%;
+  margin: 10px auto;
+}
+
+/* ------------------------------------- */
+.status {
+  text-align: center;
+  padding: 20px 10px 10px 10px;
+}
+
+.status-box {
+  background-color: #333;
+  width: calc(calc(100% / 3) - 100px);
+  margin: auto 15px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status-box > * {
+  float: right;
+  margin: auto;
+}
+
+.status-icon {
+  width: 100%;
+}
+
+.status-icon i {
+  font-size: 40px;
+  border-radius: 100%;
+  padding: 15px 20px;
+}
+
+.status-info {
+  margin: 23px 0;
+  width: 100%;
+}
+
+.status-title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.status-txt {
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ------------------------------------- */
+
+.top-posts {
+  width: calc(100% - 20px);
+  height: auto;
+  padding: 10px;
+}
+
+.top-posts-title {
+  text-align: right;
+  font-size: 18px;
+  line-height: 40px;
+  padding-right: 20px;
+}
+
+.post-list-item > * {
+  float: right;
+}
+
+.post-list-item {
+  display: inline-block;
+  height: auto;
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #333;
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+}
+
+.post-list-item:hover {
+  background-color: #2a2a2a !important;
+  transition: all ease-in-out 0.3s;
+}
+
+.post-list-item:hover .post-list-txt h4,
+.post-list-item:hover .post-list-txt p,
+.post-list-item:hover .post-list-info-icon p {
+  color: #ff7300;
+  transition: all ease-in-out 0.3s;
+}
+
+.post-list-img {
+  position: relative;
+  width: calc(calc(100% / 20) * 5);
+  height: 140px;
+}
+
+.post-list-img img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.post-list-info {
+  width: calc(calc(100% / 20) * 15);
+  text-align: right;
+}
+
+.post-list-txt {
+  margin-right: 20px;
+  text-align: right;
+}
+
+.post-list-txt h4 {
+  font-size: 18px;
+  line-height: 40px;
+  transition: all ease-in-out 0.3s;
+}
+
+.post-list-txt p {
+  font-size: 13px;
+  transition: all ease-in-out 0.3s;
+}
+
+.post-list-info-icon > * {
+  margin: 0 5px;
+  float: right;
+  transition: all ease-in-out 0.3s;
+}
+
+.post-list-info-icon {
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+
+.post-list-info-icon i {
+  font-size: 20px;
 }
 
 /* ------------------------------------- */
@@ -143,26 +364,82 @@ a {
 }
 
 /* ----------------------------- */
-/* 
+
 @media (max-width: 1199.98px) {
-  .app {
-    width: 992px;
-    margin: 0 auto;
+  .sidebar-item-link {
+    font-size: 12px;
   }
 }
 
 @media (max-width: 991.98px) {
-  .app {
-    width: 768px;
-    margin: 0 auto;
+  .header {
+    padding: 15px 10px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+    width: 200px;
+  }
+
+  .sidebar-menu {
+    margin-top: 0 !important;
+  }
+
+  .brand {
+    padding-right: 10px;
+    float: right;
+    line-height: 25px;
+    font-size: 25px;
+  }
+
+  .navbar-item-link {
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .content {
+    width: 100%;
+  padding-top: 60px;
+  }
+
+  .status-box {
+    width: calc(calc(100% / 3) - 60px);
+  }
+
+  .post-list-txt {
+    padding: 0;
+  }
+
+  .post-list-txt h4 {
+    font-size: 15px;
+    line-height: 35px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .post-list-txt p {
+    font-size: 12px;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .post-list-info-icon i {
+    font-size: 18px;
+  }
+
+  .post-list-info-icon p {
+    font-size: 12px;
+  }
+
+  .post-list-img {
+    height: 120px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .app {
-    width: 576px;
-    margin: 0 auto;
-  }
   .brand-link {
     font-size: 18px;
   }
@@ -176,9 +453,67 @@ a {
 }
 
 @media (max-width: 575.98px) {
-  .app {
-    width: 100%;
-    margin: 0 auto;
+  .status {
+    padding-bottom: 0;
+  }
+
+  .status-box {
+    width: calc(calc(100% / 3) - 48px);
+    margin: auto 5px;
+  }
+  .status-icon i {
+    font-size: 30px;
+    border-radius: 100%;
+    padding: 15px 17px;
+  }
+
+  .status-info {
+    margin: 10px 0 0 0;
+  }
+
+  .status-title {
+    font-size: 13px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .status-txt {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .top-posts-title {
+    font-size: 15px;
+    line-height: 30px;
+    padding-right: 20px;
+  }
+
+  .post-list-img {
+    position: relative;
+    width: calc(calc(100% / 20) * 7);
+    height: 100px !important ;
+  }
+
+  .post-list-info {
+    width: calc(calc(100% / 20) * 13);
+    text-align: right;
+  }
+
+  .post-list-txt h4 {
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  .post-list-txt p {
+    font-size: 11px;
+  }
+
+  .post-list-info-icon p {
+    font-size: 10px;
+  }
+
+  .post-list-info-icon i {
+    font-size: 15px;
   }
 
   .footer {
@@ -189,6 +524,52 @@ a {
 }
 
 @media (max-width: 459.98px) {
+  .status-box {
+    width: calc(calc(100% / 3) - 25px);
+    margin: auto 0px;
+  }
+  .status-icon i {
+    font-size: 25px;
+    padding: 15px 14px;
+  }
+
+  .status-title {
+    font-size: 10px;
+  }
+
+  .status-txt {
+    font-size: 7px;
+  }
+
+  .post-list-img {
+    width: calc(calc(100% / 20) * 6);
+    height: 70px !important ;
+  }
+
+  .post-list-info {
+    width: calc(calc(100% / 20) * 14);
+  }
+
+  .post-list-txt h4 {
+    font-size: 10px;
+    line-height: 30px;
+  }
+
+  .post-list-txt p {
+    font-size: 7px;
+  }
+
+  .post-list-info-icon {
+    padding: 5px 5px 0 ;
+  }
+  .post-list-info-icon p {
+    font-size: 7px;
+  }
+
+  .post-list-info-icon i {
+    font-size: 11px;
+  }
+
   .pagination ul li > * {
     padding: 0px 5px;
     font-size: 12px;
@@ -197,4 +578,4 @@ a {
   .pagination ul {
     width: 200px;
   }
-} */
+}
